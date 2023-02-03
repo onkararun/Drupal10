@@ -1,0 +1,23 @@
+name: 'custom stater theme'
+type: theme
+'base theme': stable9
+starterkit: true
+version: VERSION
+libraries:
+  - cstheme/base
+  - cstheme/messages
+  - core/normalize
+libraries-extend:
+  user/drupal.user:
+    - cstheme/user
+  core/drupal.dropbutton:
+    - cstheme/dropbutton
+  core/drupal.dialog:
+    - cstheme/dialog
+  file/drupal.file:
+    - cstheme/file
+  core/drupal.progress:
+    - cstheme/progress
+core_version_requirement: ^10
+generator: 'starterkit_theme:10.0.2'
+description: 'custom theme generation by starter theme'
