@@ -62,6 +62,9 @@ class SettingsForm extends ConfigFormBase {
     $this->config('configuration_form_example.settings')
       ->set('bio', $form_state->getValue('bio'))
       ->save();
+      $token = \Drupal::token();
+      $tok_val = $token->replace('[custom_token_type:custom_token_name]');
+      \Drupal::logger('configuration_form_example')->notice($tok_val);
   }
 
 }
