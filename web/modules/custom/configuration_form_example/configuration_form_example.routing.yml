@@ -15,4 +15,3 @@ configuration_form_example.configurationFormValue:
     _title: 'Configuration Page'
   requirements:
     _permission: 'access content'
-

@@ -1,0 +1,3 @@
+services:
+    resume.local_tasks_service:
+        class: Drupal\resume\LocalTasksService

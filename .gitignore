@@ -2,3 +2,4 @@
 .editorconfig
 .gitattributes
 vendor/
+web/sites/default/files
