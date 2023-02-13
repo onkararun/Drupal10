@@ -1,0 +1,15 @@
+example_temp_store.store_form:
+  path: /storage-form
+  defaults:
+    _form: '\Drupal\example_temp_store\Form\WithStoreForm'
+    _title: 'Storage System'
+  requirements:
+    _permission: 'access content'
+
+example_temp_store.simple_controller_show_item:
+  path: '/example_temp_store/showitem'
+  defaults:
+    _controller: '\Drupal\example_temp_store\Controller\SimpleController::showRssItems'
+    _title: 'Simple Controller with PrivateTempStore'
+  requirements:
+    _permission: 'access content'
