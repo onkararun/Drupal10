@@ -46,9 +46,7 @@ class MyServices {
      */
     public function __construct(MessengerInterface $messenger, 
                                ClientInterface $clientRequest, 
-                               TranslationManager $translationManager)
-    {
-
+                               TranslationManager $translationManager) {
         $this->messenger = $messenger;
         $this->clientRequest = $clientRequest;
         $this->translationManager = $translationManager;
@@ -71,8 +69,7 @@ class MyServices {
      *   Return an array of objects with the following properties
      *   title - body - url.
      */
-    public function getItemFromRss($url, $items)
-    {
+    public function getItemFromRss($url, $items) {
 
         // 1. Try to get the data form the RSS.
         try {
@@ -125,8 +122,7 @@ class MyServices {
      * @return array
      *   An render array.
      */
-    public function buildTheRender(array $articles)
-    {
+    public function buildTheRender(array $articles) {
         $header = ["#", "Title", "Description"];
         $output = [];
         // Set the options for all the links.
