@@ -1,0 +1,4 @@
+configuration_form_example.settings_form:
+  route_name: configuration_form_example.settings_form  
+  title: 'Settings'
+  base_route: configuration_form_example.settings_form
