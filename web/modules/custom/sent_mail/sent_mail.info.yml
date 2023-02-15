@@ -1,0 +1,5 @@
+name: E-mail Module
+description: Module to sent e-mail programmatically
+type: module
+package: Custom
+core_version_requirement: ^9 || ^10 
