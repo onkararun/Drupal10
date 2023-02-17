@@ -1,0 +1,5 @@
+name: Custom Hook
+description: This module is about custom hook
+type: module
+package: Custom
+core_version_requirement: ^9 || ^10

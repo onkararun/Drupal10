@@ -38,3 +38,12 @@ function configuration_form_example_tokens($type, $tokens, array $data, array $o
   }
   return $replacements;
 }
+
+/*
+* implement hook_drupalhacks_latest_hack()
+*/
+// function configuration_form_example_drupalhacks_latest_hacks($list){
+//   foreach($list as $key => $nid){
+//     echo "<pre>"; print_r($nid);
+//   }
+// }
