@@ -1,0 +1,5 @@
+name: Content Entity Example
+type: module
+description: 'Provides ContentEntityExampleContact entity.'
+package: Example modules
+core_version_requirement: ^9 || ^10
