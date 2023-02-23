@@ -1,0 +1,7 @@
+custom_permission.overview:
+  path: '/custom-permission'
+  defaults:
+    _controller: '\Drupal\custom_permission\Controller\TestController::getTest'
+    _title: 'Sample Permissions Page Title'
+  requirements:
+    _permission: 'access content'
