@@ -15,10 +15,10 @@ class ConfigurationFormService {
 
   public function __construct(ConfigFactoryInterface $config_factory) {
     $this->configFactory = $config_factory;
-    $this->configuration_value = $this->configFactory->getEditable('configuration_form_example.settings');
   }
   
   public function getValue() {
+    $this->configuration_value = $this->configFactory->getEditable('configuration_form_example.settings');
     return $this->configuration_value; 
   }
   
