@@ -1,0 +1,5 @@
+name: Custom Entity Example
+description: Provides ContentEntityExampleContact entity
+type: module
+package: Custom
+core_version_requirement: ^9 || ^10

@@ -1,0 +1,6 @@
+custom_access_check.content:
+  path: '/access-check-page'
+  defaults:
+    _controller: '\Drupal\custom_access_check\Controller\ExampleController::content'
+  requirements:
+    _custom_access: '\Drupal\custom_access_check\Controller\ExampleController::access'

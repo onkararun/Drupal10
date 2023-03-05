@@ -1,0 +1,5 @@
+name: Custom Access Check
+description: Module for checking custom access
+type: module
+package: Custom
+core_version_requirement: ^9 || ^10
