@@ -4,3 +4,13 @@ services:
     arguments: ['@config.factory']
     tags:
       - {name: tag_name}
+
+  hello_world.logger.channel.hello_world:
+    parent: logger.channel_base
+    arguments: ['hello_world']
+
+  hello_world.logger.mail_logger:
+    class: Drupal\hello_world\Logger\MailLogger
+    arguments: ['@logger.log_message_parser', '@config.factory']
+    tags:
+    - { name: logger }
