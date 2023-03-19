@@ -85,6 +85,21 @@ class SalutationConfigurationForm extends ConfigFormBase {
     $store->set('name', 'kumar');
     $value = $store->get('name');
 
+    /** @var \Drupal\node\Entity\NodeType $type it changes the name of content type */
+    // $type = \Drupal::entityTypeManager()->getStorage('node_type')->load('article');
+    // $type->set('name', 'Article');
+    // $type->save();
+
+    //Creating New Entities
+    // $values = [
+    //   'type' => 'article',
+    //   'title' => 'Progrmmatically Created Node'
+    // ];
+    /** @var \Drupal\node\NodeInterface $node */
+    // $node = \Drupal::entityTypeManager()->getStorage('node')->create($values);
+    // $node->set('body', 'some text');
+    // $node->save();
+
     $this->config('hello_world.custom_salutation')->set('salutation', $form_state->getValue('salutation'))->save();
     parent::submitForm($form, $form_state);
 
