@@ -28,29 +28,25 @@ class SalutationConfigurationForm extends ConfigFormBase {
   }
 
   /**
-  * @var \Drupal\Core\Logger\LoggerChannelInterface
-  */
+   * @var \Drupal\Core\Logger\LoggerChannelInterface
+   */
   protected $logger;
 
   /**
-  * SalutationConfigurationForm constructor.
-  *
-  * @param \Drupal\Core\Config\ConfigFactoryInterface $config_
-  factory
-  *
-  The factory for configuration objects.
-  * @param \Drupal\Core\Logger\LoggerChannelInterface $logger
-  *
-  The logger.
-  */
+   * SalutationConfigurationForm constructor.
+   * @param \Drupal\Core\Config\ConfigFactoryInterface $config_factory
+   * The factory for configuration objects.
+   * @param \Drupal\Core\Logger\LoggerChannelInterface $logger
+   * The logger.
+   */
   public function __construct(ConfigFactoryInterface $config_factory, LoggerChannelInterface $logger) {
     parent::__construct($config_factory);
     $this->logger = $logger;
   }
 
   /**
-  * {@inheritdoc}
-  */
+   * {@inheritdoc}
+   */
   public static function create(ContainerInterface $container) {
     return new static(
       $container->get('config.factory'),
@@ -76,6 +72,34 @@ class SalutationConfigurationForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state){
+
+    /** @var \Drupal\Core\TempStore\PrivateTempStoreFactory $factory */
+    $factory = \Drupal::service('tempstore.private');
+    $store = $factory->get('hello_world.my_collection');
+    $store->set('name', 'arun');
+    $value = $store->get('name');
+
+    /** @var \Drupal\Core\TempStore\SharedTempStoreFactory $factory */
+    $factory = \Drupal::service('tempstore.shared');
+    $store = $factory->get('hello_world.my_collection');
+    $store->set('name', 'kumar');
+    $value = $store->get('name');
+
+    /** @var \Drupal\node\Entity\NodeType $type it changes the name of content type */
+    // $type = \Drupal::entityTypeManager()->getStorage('node_type')->load('article');
+    // $type->set('name', 'Article');
+    // $type->save();
+
+    //Creating New Entities
+    // $values = [
+    //   'type' => 'article',
+    //   'title' => 'Progrmmatically Created Node'
+    // ];
+    /** @var \Drupal\node\NodeInterface $node */
+    // $node = \Drupal::entityTypeManager()->getStorage('node')->create($values);
+    // $node->set('body', 'some text');
+    // $node->save();
+
     $this->config('hello_world.custom_salutation')->set('salutation', $form_state->getValue('salutation'))->save();
     parent::submitForm($form, $form_state);
 
