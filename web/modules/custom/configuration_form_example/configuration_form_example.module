@@ -4,8 +4,7 @@ use Drupal\Core\Routing\RouteMatchInterface;
 /**
 * Implements hook_help().
 */
-function configuration_form_example_help($route_name, RouteMatchInterface
-  $route_match) {
+function configuration_form_example_help($route_name, RouteMatchInterface $route_match) {
   switch ($route_name) {
     case 'help.page.configuration_form_example':
     $output = '';
@@ -46,7 +45,7 @@ function configuration_form_example_tokens($type, $tokens, array $data, array $o
       switch ($name) {
         case 'custom_token_name':
         $text = 'Save Successfully!';
-	    $replacements[$original] = $text;
+	      $replacements[$original] = $text;
 	    break;
       }
     }
