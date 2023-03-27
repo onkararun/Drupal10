@@ -1,0 +1,5 @@
+name: License Plate
+description: Custom Field For License Plate Data
+type: module
+package: Custom
+core_version_requirement: ^9 || ^10
