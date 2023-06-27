@@ -815,10 +815,10 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 # }
 $databases['default']['default'] = array (
   'database' => 'drupal10',
-  'username' => 'drupal10',
-  'password' => 'drupal10',
+  'username' => 'arun',
+  'password' => 'arun',
   'prefix' => '',
-  'host' => 'database.drupal10.internal',
+  'host' => 'localhost',
   'port' => '3306',
   'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
   'driver' => 'mysql',
